@@ -45,6 +45,60 @@ onlyAlphanumeric=()=>
      return false;
      }
 }
+
+checkEmail=() => {
+    email = document.getElementById("email").value;
+  
+    regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+    return regex.test(email);
+  
+  }
+  checkSex=()=>{
+    male = document.getElementById('male');
+    female = document.getElementById('female');
+ 
+    if(!male.checked && !female.checked){
+        return false;
+    }
+
+    return true;
+  
+}
+checkLang=()=>{
+
+    eng = document.getElementById("english");
+    nonEng = document.getElementById("non_english");
+
+    if ( !eng.checked && !nonEng.checked){
+        return false;
+    }
+
+
+    return true;
+}
+function checkZipCode() {
+    zip = document.getElementById("zip_code").value;
+  
+    if (zip.length == 0) return false;
+  
+    for (i = 0; i < zip.length; i++) {
+      if (zip.charCodeAt(i) < 48 || zip.charCodeAt(i) > 57) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  function checkCountry() {
+    country = document.getElementById("country").value;
+    if (country == "") {
+      return false;
+    }
+  
+    return true;
+  }
+  
     
 // function onlyAlphabets() {
 //     e = document.getElementById("firstname").value;
@@ -79,6 +133,36 @@ function getAlert() {
         alert("Alphanumeric characters only my bruhhh ");
         return;
       }
+      if (!checkZipCode()) {
+        alert("Zip code must have numeric characters");
+        return;
+      }
+      if (!checkCountry()) {
+        alert("Select your country from list");
+        return;
+      }
     
+      if (!checkZipCode()) {
+        alert("Zip code must have numeric characters");
+        return;
+      }
+      if (!checkEmail()) {
+        alert("You have entered an invalid email");
+        return;
+      }
+    
+      if(!checkSex()){
+        alert("Select Male/Female");
+        return;
+      }
+    
+    
+      if(!checkLang()){
+        alert("Language must be selected");
+        return;
+      }
+    alert("Form Successfully Submitted");
+
 }
+
 document.getElementById("submit").addEventListener("click", getAlert);

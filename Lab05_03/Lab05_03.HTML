@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab05_03</title>
+    <link rel="stylesheet" type="text/css" href="./Lab05_03.css" />
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1 class="left-space ">Registration Form</h1>
+    <p>Use tab keys to move from one input field to the next.</p>
+    <div class="left-space">
+        <form action="submit">
+            <label for="user_id" class="rigid">User id:</label>
+            <input type="text" name="user_id" id="user_id" />
+            <br />
+            <label for="password" class="rigid">Password:</label>
+            <input type="password" name="password" id="password" />
+            <br />
+            <label for="fname" class="rigid">First Name:</label>
+            <input type="text" class="long-text" name="fname" id="fname" />
+            <br />
+            <label for="address" class="rigid">Address:</label>
+            <input type="text" class="long-text" name="address" id="address" />
+
+            <br />
+            <label for="country" class="rigid">Country:</label>
+            <select name="country" id="country">
+                <option value="">(Please select a country)</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+                <option value="nepal">Nepal</option>
+                <option value="russia">Russia</option>
+                <option value="usa">USA</option>
+
+                </option>
+            </select>
+            <br />
+            <label for="zip_code" class="rigid">ZIP Code:</label>
+            <input type="number" class="mid-text" name="zip_code" id="zip_code" />
+            <br />
+            <label for="email" class="rigid">Email:</label>
+            <input type="email" class="long-text" name="email" id="email" />
+            <br />
+            <label for="" class="rigid">Sex:</label>
+            <input type="radio" id="male" name="sex" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label for="female">Female</label>
+            <br />
+            <label for="lang" class="rigid">Language:</label>
+            <input type="checkbox" name="lang" id="english" value="english" checked="true">
+            <label for="english">English</label>
+            <input type="checkbox" name="lang" id="non_english" value="non_english">
+            <label for="non_english">Non English</label>
+            <br />
+            <div class="container">
+                <label for="about">About:</label>
+
+                <textarea id="about" name="about"></textarea>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="submit" name="submit">
+            <input type="button" value="Reset" id="reset" name="reset">
+
+        </form>
+    </div>
+    <script type="text/javascript" src="./Lab05_03.js"></script>
+
+</body>
+
+</html>

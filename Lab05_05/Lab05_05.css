@@ -1,0 +1,22 @@
+h2 {
+    margin-left: 10px;
+}
+
+table {
+    margin-left: 70px;
+    width: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
+    font-size: 22px;
+    
+
+}
