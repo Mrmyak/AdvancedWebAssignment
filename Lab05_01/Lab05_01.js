@@ -17,11 +17,25 @@ checkUserID=() => {
     return 1;
   }
 
-function onlyAlphabets()
+onlyAlphabets=()=>
 {
     e = document.getElementById("firstname").value;
 
    var regEx = /^[A-Za-z]+$/;
+   if(e.match(regEx))
+     {
+      return true;
+     }
+   else
+     {
+     return false;
+     }
+}
+onlyAlphanumeric=()=>
+{
+    e = document.getElementById("address").value;
+
+   var regEx = /^[A-Za-z0-9]+$/;
    if(e.match(regEx))
      {
       return true;
@@ -49,8 +63,6 @@ function onlyAlphabets()
 
 
 function getAlert() {
-    // check sequentially
-  
     if (!checkUserID()) {
       alert("User ID length must be between 5 to 12 and must not be left blank");
       return;
@@ -60,7 +72,11 @@ function getAlert() {
         return;
     }
     if (!onlyAlphabets()) {
-        alert("Alphabets  only bruhhh ");
+        alert("Alphabets only bruhhh ");
+        return;
+      }
+      if (!onlyAlphanumeric()) {
+        alert("Alphanumeric characters only my bruhhh ");
         return;
       }
     
