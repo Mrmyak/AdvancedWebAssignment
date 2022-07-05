@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05_01</title>
+    <link rel="stylesheet" type="text/css" href="./Lab05_01.css" />
+
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p>Use tab keys to move from one input field to the next.</p>
+    <div >
+        <form  action="submit">
+            <label for="user_id" class="spaces">User id:</label>
+            <input type="text" name="user_id" id="user_id" required />
+            <br />
+            <!-- <input type='text' pattern='[A-Za-z\\s]*'/> -->
+            <label for="password" class="spaces">Password:</label>
+            <input type="password" name="password" id="password" required />
+            <br />
+            <label for="firstname" class="spaces">First Name:</label>
+            <input type="text" class="long-text" name="firstname" id="firstname" required/>
+            <br />
+            <label for="address" class="spaces">Address:</label>
+            <input type="text" class="long-text" name="address" id="address" required />
+
+            <br />
+            <label for="country" class="spaces">Country:</label>
+            <select name="country" id="country" required>
+                <option value="">(Please select a country)</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+                <option value="nepal">Nepal</option>
+                <option value="russia">Russia</option>
+                <option value="usa">USA</option>
+
+                </option>
+            </select>
+            <br />
+            <label for="zip_code" class="spaces">ZIP Code:</label>
+            <input type="number" class="mid-text" name="zip_code" id="zip_code" required/>
+            <br />
+            <label for="email" class="spaces">Email:</label>
+            <input type="text" class="long-text" name="email" id="email" />
+            <br />
+            <label for="" class="spaces">Sex:</label>
+            <input type="radio" id="male" name="sex" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="Female">
+            <label for="female">Female</label>
+            <br />
+            <label for="language" class="spaces">Language:</label>
+            <input type="checkbox" name="lang" id="english" value="english" checked="true">
+            <label for="english">English</label>
+            <input type="checkbox" name="lang" id="non_english" value="non_english">
+            <label for="non_english">Non English</label>
+            <br />
+            <div class="container">
+                <label for="about">About:</label>
+
+                <textarea id="about" name="about"></textarea>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="submit" name="submit" >
+        </form>
+
+    </div>
+    
+</body>
+<script type="text/javascript" src="./Lab05_01.js"></script>
+
+</html>

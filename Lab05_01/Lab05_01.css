@@ -1,0 +1,40 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-space {
+    margin-left: 80px;
+}
+
+.container {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+#submit{
+    font-size: normal;
+    text-align: center;
+    margin-left:200px;
+}
+
+.spaces {
+display: inline-block;
+    width: 80px;
+    margin-top: 5px;
+}
+
+.long-text {
+    width:400px;
+}
+
+
+.mid-text{
+    width:200px;
+}
+
+textarea{
+    display: inline-block;
+    width:350px;
+    height:150px;
+
+}
